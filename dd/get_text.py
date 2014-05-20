@@ -52,7 +52,7 @@ for row in sys.stdin:
     content_paths = [s.strip() for s in contents.splitlines()]
     for c in content_paths:
         if c.endswith('.nxml'):
-            shutil.move(tgzdir+"/"+c,xmldir+"/"+pmcid+"___"+c.split('/')[-1])
+            shutil.move(tgzdir+"/"+c,xmldir+"/"+pmcid+".nxml") #"___"+c.split('/')[-1]) #could add more descriptive info
         if c.endswith('.pdf'):
             shutil.move(tgzdir+"/"+c,pdfdir+"/"+pmcid+"___"+c.split('/')[-1])
 
